@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nokia Here maps with Angular JS</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"/>
+    <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-resource.js "></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-animate.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css" />
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="../scripts/module.js"></script>
+    <script src="../scripts/mapService.js"></script>
+    <script src="../scripts/controller.js"></script>
+
+
+
+
+</head>
+<body ng-App="mappingModule">
+<div class="row" ng-controller="mappingController">
+    <div class="col-xs-5">
+        <div class="row">
+            Enter Application Id : <input type="text" ng-Model="applicationId" />
+        </div>
+        <div class="row">
+            Enter Application Code : <input type="text" ng-Model="applicationCode" />
+        </div>
+        <button class="btn btn-primary" ng-click="getMap()">Get Map</button>
+    </div>
+    <div class="col-xs-7">
+        <div id="map" style="height: 400px; background: transparent">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
