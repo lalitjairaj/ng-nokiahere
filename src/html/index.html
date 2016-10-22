@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Nokia Here maps with Angular JS</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.8/angular-resource.js "></script>
     <script src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
@@ -22,21 +22,42 @@
 
 </head>
 <body ng-App="mappingModule">
-<div class="row" ng-controller="mappingController">
-    <div class="col-xs-5">
-        <div class="row">
-            Enter Application Id : <input type="text" ng-Model="applicationId" />
-        </div>
-        <div class="row">
-            Enter Application Code : <input type="text" ng-Model="applicationCode" />
-        </div>
-        <button class="btn btn-primary" ng-click="getMap()">Get Map</button>
-    </div>
-    <div class="col-xs-7">
-        <div id="map" style="height: 400px; background: transparent">
+<div class="row" ng-controller="mappingController" style="margin-left: 30px">
+    <div class="row">
+
+        <div class="col-xs-4">
+            <div class="row">
+                <div class="col-xs-5" align="right">
+                    Enter Application Id :
+                </div>
+                <div class="col-xs-7">
+                    <input type="text" ng-Model="applicationId" class="form-control" />
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xs-5" align="right">
+                    Enter Application Code :
+                </div>
+                <div class="col-xs-7">
+                    <input type="text" ng-Model="applicationCode" class="form-control" />
+                </div>
+
+            </div>
+            <div class="row">
+                <div align="right" class="col-xs-12">
+                    <button class="btn btn-primary" ng-click="getMap()">Get Map</button>
+                </div>
+            </div>
 
         </div>
+        <div class="col-xs-8">
+            <div id="map" style="height: 400px; background: transparent">
+
+            </div>
+        </div>
     </div>
+
 </div>
 
 </body>
